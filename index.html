@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fabbly Premium Clothing. High-end tailored fashion.">
+    <title>Fabbly | Premium Clothing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="672806512_2048362706102132_3763652892459774303_n.jpg" alt="Fabbly Logo" class="brand-logo">
+                </a>
+            </div>
+
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-bar">
+                <button aria-label="Search" class="search-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </div>
+
+            <div class="nav-right" style="align-items: center; display: flex; gap: 1rem;">
+                <a href="#" class="cart-icon" id="cartOpenBtn" style="display: flex; align-items: center; gap: 5px;" aria-label="Open Bag">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <nav class="navbar-bottom container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="collections.html">Collections</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Elevate Your Style</h1>
+                <p>Discover the new era of sophisticated tailoring and premium fabrics. Uncompromising quality for the modern gentleman.</p>
+                <a href="collections.html" class="btn btn-primary">Shop Collection</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem;">fabbly</h3>
+                <p>Premium Clothing</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Explore</h4>
+                    <a href="index.html">Home</a>
+                    <a href="collections.html">Collections</a>
+                </div>
+                <div class="link-group">
+                    <h4>Corporate</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="link-group">
+                    <h4>Follow Us</h4>
+                    <a href="https://www.instagram.com/fabbly_?igsh=Y3hmdWd3Y3VxdHMw" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Fabbly Premium Clothing. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Shopping Bag Drawer -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Your Bag</h2>
+            <button class="close-cart" id="cartCloseBtn">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart-msg">Your bag is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotalPrice">$0.00</span>
+            </div>
+            <a href="#" class="btn btn-primary btn-checkout" id="checkoutBtn" onclick="alert('Order Confirmed!'); document.getElementById('cartOpenBtn').click();">Confirm Order</a>
+        </div>
+    </div>
+
+    <!-- AI Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <!-- Chat Toggle Button -->
+        <button class="chat-toggle-btn" id="chatToggleBtn" aria-label="Open Chat">
+            <svg class="chat-icon-open" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <svg class="chat-icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            <span class="chat-badge" id="chatBadge" style="display:none;">1</span>
+        </button>
+
+        <!-- Chat Window -->
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2a5 5 0 0 1 5 5v1a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5z"></path>
+                            <path d="M19.5 22a7.5 7.5 0 0 0-15 0"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="chat-header-title">Fabbly Assistant</h4>
+                        <span class="chat-status"><span class="chat-status-dot"></span> Online</span>
+                    </div>
+                </div>
+                <button class="chat-minimize-btn" id="chatMinimizeBtn" aria-label="Minimize Chat">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <!-- Welcome message -->
+                <div class="chat-message bot-message">
+                    <div class="chat-message-avatar">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                        </svg>
+                    </div>
+                    <div class="chat-bubble">
+                        <p>Welcome to Fabbly! 👋</p>
+                        <p>How can I help you today? Ask me about our collections, sizing, orders, or anything else.</p>
+                        <span class="chat-time">Just now</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-suggestions" id="chatSuggestions">
+                <button class="chat-suggestion-chip" data-msg="What collections do you have?">Collections</button>
+                <button class="chat-suggestion-chip" data-msg="How do I track my order?">Track Order</button>
+                <button class="chat-suggestion-chip" data-msg="What's your sizing guide?">Sizing Guide</button>
+                <button class="chat-suggestion-chip" data-msg="I need help with returns">Returns</button>
+            </div>
+
+            <div class="chat-input-area">
+                <div class="chat-input-wrapper">
+                    <input type="text" class="chat-input" id="chatInput" placeholder="Type a message..." autocomplete="off">
+                    <button class="chat-send-btn" id="chatSendBtn" aria-label="Send Message" disabled>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+                <p class="chat-disclaimer">Powered by Fabbly AI</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>

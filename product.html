@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Classic Tailor | Fabbly Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="672806512_2048362706102132_3763652892459774303_n.jpg" alt="Fabbly Logo" class="brand-logo">
+                </a>
+            </div>
+
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-bar">
+                <button aria-label="Search" class="search-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </div>
+
+            <div class="nav-right" style="align-items: center; display: flex; gap: 1rem;">
+                <a href="#" class="cart-icon" id="cartOpenBtn" style="display: flex; align-items: center; gap: 5px;" aria-label="Open Bag">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <nav class="navbar-bottom container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="collections.html">Collections</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="product-page-container">
+        <div class="product-image-container">
+            <!-- The product image retains its color, while the rest of the UI is strictly black and white -->
+            <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?q=80&w=1200&auto=format&fit=crop" alt="The Classic Tailor Suit">
+        </div>
+        
+        <div class="product-details">
+            <h1>The Classic Tailor</h1>
+            <div class="product-price">$895.00</div>
+            
+            <div class="product-description">
+                <p>Meticulously crafted from the finest Italian wool, The Classic Tailor suit represents the pinnacle of modern menswear. Designed for the sharp, intelligent gentleman, this two-piece suit features a tailored fit that contours perfectly to your body.</p>
+                <p>The jacket features a classic notch lapel, double vents, and horn buttons. The trousers are flat-front with a gentle taper. Uncompromising pure aesthetic.</p>
+            </div>
+            
+            <div class="size-selector">
+                <h3>Select Size (US)</h3>
+                <div class="sizes">
+                    <button class="size-btn">38</button>
+                    <button class="size-btn">40</button>
+                    <button class="size-btn active">42</button>
+                    <button class="size-btn">44</button>
+                    <button class="size-btn">46</button>
+                </div>
+            </div>
+            
+            <button class="add-to-cart-btn">Add to Bag</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem;">fabbly</h3>
+                <p>Premium Clothing</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Explore</h4>
+                    <a href="index.html">Home</a>
+                    <a href="collections.html">Collections</a>
+                </div>
+                <div class="link-group">
+                    <h4>Corporate</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="link-group">
+                    <h4>Follow Us</h4>
+                    <a href="https://www.instagram.com/fabbly_?igsh=Y3hmdWd3Y3VxdHMw" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Fabbly Premium Clothing. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Shopping Bag Drawer -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Your Bag</h2>
+            <button class="close-cart" id="cartCloseBtn">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart-msg">Your bag is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotalPrice">$0.00</span>
+            </div>
+            <a href="#" class="btn btn-primary btn-checkout" id="checkoutBtn" onclick="alert('Order Confirmed!'); document.getElementById('cartOpenBtn').click();">Confirm Order</a>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Simple size selection logic for the product page
+        document.querySelectorAll('.size-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Dynamic Product Loading
+        document.addEventListener('DOMContentLoaded', async () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+            if (productId) {
+                let products = await window.fetchProducts();
+                const product = products.find(p => p.id === productId);
+                
+                if (product) {
+                    const imgEl = document.querySelector('.product-image-container img');
+                    const titleEl = document.querySelector('.product-details h1');
+                    const priceEl = document.querySelector('.product-price');
+                    const descEl = document.querySelector('.product-description');
+                    const sizesEl = document.querySelector('.sizes');
+                    
+                    if(imgEl) imgEl.src = product.image;
+                    if(titleEl) titleEl.innerText = product.name;
+                    if(priceEl) priceEl.innerText = '৳' + product.price;
+                    
+                    if(descEl && product.description) {
+                        descEl.innerHTML = `<p>${product.description.replace(/\n/g, '<br>')}</p>`;
+                    }
+                    
+                    if(sizesEl && product.sizes) {
+                        sizesEl.innerHTML = '';
+                        product.sizes.forEach((size, index) => {
+                            const btn = document.createElement('button');
+                            btn.className = index === 0 ? 'size-btn active' : 'size-btn';
+                            btn.innerText = size;
+                            
+                            btn.addEventListener('click', function() {
+                                document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+                                this.classList.add('active');
+                            });
+                            
+                            sizesEl.appendChild(btn);
+                        });
+                        
+                        const sizeTitle = document.querySelector('.size-selector h3');
+                        if (sizeTitle) sizeTitle.innerText = 'Select Size';
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
