@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ---- Webhook URL ----
-    const WEBHOOK_URL = 'https://n8n-test-server-0r8a.onrender.com/webhook/chat';
+    const WEBHOOK_URL = 'https://personal-assistant-4rc3.onrender.com/webhook/chat';
 
     // ---- Send message ----
     async function handleSend() {
